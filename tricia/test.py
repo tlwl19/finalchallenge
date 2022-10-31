@@ -67,9 +67,8 @@ def seq4():
     colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
     global colour
     for r in range(o):
-        for c in range(o): 
-            button[r][c].config(bg=colours[c])
-
+        for c in range(o):
+            button[r][c].config(bg=colours[c+r])
 
 # Main GUI Windows
 main = Tk()
