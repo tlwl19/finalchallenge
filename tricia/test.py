@@ -60,14 +60,16 @@ def seq3():
             #00 01 02 03 04
             #10 11 12 13 14
             #20 21 22 23 24
-            #30 31 32 33 34a
+            #30 31 32 33 34
             #40 41 42 43 44
 
 def seq4():
+    colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
     global colour
     for r in range(o):
-        for c in range(o):
-    
+        for c in range(o): 
+            button[r][c].config(bg=colours[c])
+
 
 # Main GUI Windows
 main = Tk()
