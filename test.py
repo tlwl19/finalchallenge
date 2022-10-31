@@ -60,10 +60,11 @@ def seq3():
             #00 01 02 03 04
             #10 11 12 13 14
             #20 21 22 23 24
-            #30 31 32 33 34a
+            #30 31 32 33 34
             #40 41 42 43 44
 
 def seq4():
+    colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
     global colour
     for r in range(o):
         for c in range(o):
@@ -106,7 +107,7 @@ for r in range(o):
 colourRed = Button(frame3, text="All white", bg=('white'), font=(200), command=seq)
 colourGreen = Button(frame3, text="All Black", fg=('white'), bg=('black'), font=(200), command=seq2)
 colourBlue = Button(frame3, text="X Pattern", bg=('gold'), font=(200), command=seq3)
-colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200),command=seq4)
+colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200), command=seq4)
 colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200))
 colourRed.grid(row=0, column=0)
 colourGreen.grid(row=0, column=1)
