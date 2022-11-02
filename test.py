@@ -5,7 +5,7 @@ values = [0,20,30,40,50,60,70,90]
 def choose_colour(button_pressed):
     global colour
     colour = button_pressed
-    print("Colour choice is {}".format(colour))
+    #print("Colour choice is {}".format(colour))
 # Functions to print "Button Pressed" Results
 def red_pressed(r, c):
     global colour
@@ -125,20 +125,22 @@ def seq4():
                 #p = 0
             for c in range(o):
                 p = p-1
-                if p < 1:
+                if p < 0:
                     p = len(colours)-1
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
                 #print (p)     
     else:
-        p = len(colours)
+        p = 0
         w.append(0)
         for r in range(o):
             #if p > (len(colours)-1):
                 #p = 0
             for c in range(o):
-                p = p-2
-                if p < 1:
+                p = p+2
+                if p > len(colours)-1:
+                    p = 0
+                elif p > 4:
                     p = len(colours)-1
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
@@ -209,7 +211,7 @@ frame3.grid(row=1 , column=0, columnspan=2)
 
 # Colour Section (Using Button Widget)
 colour = 0
-o = 5 #o represent the number of row & column
+o = 32 #o represent the number of row & column
 
 #grid0 = Button(main, bg=('white') , command=red_pressed , height=2, width=2)
 #grid0.grid(column=0, row=0)
