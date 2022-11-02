@@ -9,21 +9,21 @@ def choose_colour(button_pressed):
 def red_pressed(r, c):
     global colour
     if colour == 0:
-        button[r][c].config(bg='white')
+        button[r][c].config(bg='grey99')
     elif colour == 1:
-        button[r][c].config(bg='#DCDCDC')
+        button[r][c].config(bg='grey88')
     elif colour == 2:
-        button[r][c].config(bg='#BEBEBE')
+        button[r][c].config(bg='grey77')
     elif colour == 3:
-        button[r][c].config(bg='#989898')
+        button[r][c].config(bg='grey66')
     elif colour == 4:
-        button[r][c].config(bg='#696969')
+        button[r][c].config(bg='grey44')
     elif colour == 5:
-        button[r][c].config(bg='#404040')
+        button[r][c].config(bg='grey33')
     elif colour == 6:
-        button[r][c].config(bg='#101010')
+        button[r][c].config(bg='grey11')
     else:
-        button[r][c].config(bg='black') 
+        button[r][c].config(bg='grey1') 
     print("Button Pressed is RED!")
 
 def seq():
@@ -43,17 +43,17 @@ def seq3():
                 button[r][c].config(bg='black')
             elif r + c == o-1:
                 button[r][c].config(bg='black')
-            elif r != 0 and r != o-1:
-                if o%2 == 0:
-                    if c != o/2 and c != (o/2)-1:
-                        button[r][c].config(bg='#989898')
-                    else:
-                        button[r][c].config(bg='white')
-                else:
-                    if c != (o-1)/2:
-                        button[r][c].config(bg='#989898')
-                    else:
-                        button[r][c].config(bg='white')    
+            # elif r != 0 and r != o-1:
+            #     if o%2 == 0:
+            #         if c != o/2 and c != (o/2)-1:
+            #             button[r][c].config(bg='#989898')
+            #         else:
+            #             button[r][c].config(bg='white')
+            #     else:
+            #         if c != (o-1)/2:
+            #             button[r][c].config(bg='#989898')
+            #         else:
+            #             button[r][c].config(bg='white')    
             else:
                 button[r][c].config(bg='white')
             #00 01 02 03 04
@@ -64,9 +64,14 @@ def seq3():
 
 def seq4():
     global colour
+    colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']
+    p = -1
     for r in range(o):
         for c in range(o):
-            button[r][c].config(bg=colours[c+r])
+            p = p+1
+            if p > len(colours)-1:
+                p = 0
+                button[r][c].config(bg=colours[p])
 
 # Main GUI Windows
 main = Tk()
