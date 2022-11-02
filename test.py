@@ -25,7 +25,7 @@ def red_pressed(r, c):
         button[r][c].config(bg='#101010')
     else:
         button[r][c].config(bg='black') 
-    print("Button Pressed is RED!")
+    #print("Button Pressed is RED!")
 
 def seq():
     for r in range(o):
@@ -40,21 +40,24 @@ def seq2():
 def seq3():
     for r in range(o):
         for c in range(o):
-            if r == c:
+            if r == c or r+c == o-1:
                 button[r][c].config(bg='black')
-            elif r + c == o-1:
-                button[r][c].config(bg='black')
-            elif r != 0 and r != o-1:
-                if o%2 == 0:
-                    if c != o/2 and c != (o/2)-1:
-                        button[r][c].config(bg='#989898')
-                    else:
-                        button[r][c].config(bg='white')
-                else:
-                    if c != (o-1)/2:
-                        button[r][c].config(bg='#989898')
-                    else:
-                        button[r][c].config(bg='white')    
+            #elif r + c == o-1:
+                #button[r][c].config(bg='black')
+            # elif r != 0 and r != o-1:
+            #     if o%2 == 0:
+            #         if c != o/2 and c != (o/2)-1:
+            #             button[r][c].config(bg='#989898')
+            #         else:
+            #             button[r][c].config(bg='white')
+            #     else:
+            #         if c != (o-1)/2:
+            #             button[r][c].config(bg='#989898')
+            #         else:
+            #             button[r][c].config(bg='white')
+    # for r in range(0, o-1, 1):
+    #     for c in range(0, int(r/2)+1, +1):
+    #         button[r][c].config(bg='#696969')
             else:
                 button[r][c].config(bg='white')
             #00 01 02 03 04
@@ -64,11 +67,81 @@ def seq3():
             #40 41 42 43 44
 
 def seq4():
+    global w, colours, colour
     colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
-    global colour
-    for r in range(o):
-        for c in range(o):
-            button[r][c].config(bg=colours[c+r])
+    if len(w) > 4:
+        w = [0]
+    if len(w) == 2:
+        p = -1
+        w.append(0)
+        for r in range(o):
+            #if p > (len(colours)-1):
+                #p = 0
+            for c in range(o):
+                p = p+1
+                if p > len(colours)-1:
+                    p = 0
+                button[r][c].config(bg=colours[p])
+                #print (p)
+    elif len(w) == 3:
+        p = len(colours)
+        w.append(0)
+        for r in range(o):
+            #if p > (len(colours)-1):
+                #p = 0
+            for c in range(o):
+                p = p-2
+                if p < 1:
+                    p = len(colours)-2
+                button[r][c].config(bg=colours[p])
+                #print (p)
+    elif len(w) == 1:
+        p = len(colours)
+        w.append(0)
+        for r in range(o):
+            #if p > (len(colours)-1):
+                #p = 0
+            for c in range(o):
+                p = p-1
+                if p < 1:
+                    p = len(colours)-1
+                button[r][c].config(bg=colours[p])
+                #print (p)     
+    else:
+        p = len(colours)
+        w.append(0)
+        for r in range(o):
+            #if p > (len(colours)-1):
+                #p = 0
+            for c in range(o):
+                p = p-2
+                if p < 1:
+                    p = len(colours)-1
+                button[r][c].config(bg=colours[p])
+                #print (p)  
+
+# def seq4():
+#     colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
+#         global colour
+#         for r in range(o):
+#             for c in range(o):
+#                 if c > (len(colours)-1):
+#                     c = 0
+#                 button[r][c].config(bg=colours[c])
+
+# def seq5():
+#     colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
+#     p = -1
+#     global colour
+#     for r in range(o):
+#         #if p > (len(colours)-1):
+#             #p = 0
+#         for c in range(o):
+#             p = p+1
+#             if p > len(colours)-1:
+#                 p = 0
+#             button[r][c].config(bg=colours[p])
+#             print (p)
 
 # Main GUI Windows
 main = Tk()
@@ -88,7 +161,7 @@ frame3.grid(row=1 , column=0, columnspan=2)
 
 # Colour Section (Using Button Widget)
 colour = 0
-o = 3 #o represent the number of row & column
+o = 32 #o represent the number of row & column
 
 #grid0 = Button(main, bg=('white') , command=red_pressed , height=2, width=2)
 #grid0.grid(column=0, row=0)
@@ -100,13 +173,15 @@ o = 3 #o represent the number of row & column
 button = [[r for r in range(o)] for c in range(o)]
 for r in range(o):
     for c in range(o):
-        button[r][c] = Button(frame1, bg="white", text="   ", font=('Arial',21), command=lambda m=r, l=c:red_pressed(m, l))
+        #button[r][c] = Button(frame1, bg="white", text="   ", font=('Arial',21), command=lambda m=r, l=c:red_pressed(m, l))
+        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda m=r, l=c:red_pressed(m, l))
         button[r][c].grid(row=r, column=c)
         
 
 colourRed = Button(frame3, text="All white", bg=('white'), font=(200), command=seq)
 colourGreen = Button(frame3, text="All Black", fg=('white'), bg=('black'), font=(200), command=seq2)
 colourBlue = Button(frame3, text="X Pattern", bg=('gold'), font=(200), command=seq3)
+w = [0]
 colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200), command=seq4)
 colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200))
 colourRed.grid(row=0, column=0)
