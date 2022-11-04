@@ -1,17 +1,17 @@
 from tkinter import *
-
+# Variable to define the axis angle
 values = [0,20,30,40,50,60,70,90]
 # Function to choose colour
 def choose_colour(button_pressed):
-    global colour
+    global colour #value of the colour selected
     colour = button_pressed
-    #print("Colour choice is {}".format(colour))
+
 # Functions to print "Button Pressed" Results
-def red_pressed(r, c):
+def red_pressed(r, c): 
     global colour
     if colour == 0:
-        button[r][c].config(bg='grey99')
-        value[r][c] = 0
+        button[r][c].config(bg='grey99') #to configure the background colour of the grid selected with the selected colour
+        value[r][c] = 0 #assign the grid's angle value based on the colour selected
     elif colour == 20:
         button[r][c].config(bg='grey88')
         value[r][c] = 20
@@ -33,7 +33,6 @@ def red_pressed(r, c):
     else:
         button[r][c].config(bg='grey1') 
         value[r][c] = 90
-    #print("Button Pressed is RED!")
 
 def seq():
     global values
@@ -53,11 +52,11 @@ def seq3():
     global values
     for r in range(o):
         for c in range(o):
-            if r == c or r+c == o-1:
+            if r == c or r+c == o-1: #black x pattern 
                 button[r][c].config(bg='grey1')
                 value[r][c] = values[7]
-            else:
-                button[r][c].config(bg='grey99')
+            else: 
+                button[r][c].config(bg='grey99') #white background
                 value[r][c] = values[0]
             #elif r + c == o-1:
                 #button[r][c].config(bg='black')
@@ -83,12 +82,10 @@ def seq3():
             #20 21 22 23 24
             #30 31 32 33 34
             #40 41 42 43 44
-    
 
 def seq4():
     global w, colours, colour, values
     colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']
-    #colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
     if len(w) > 4:
         w = [0]
     if len(w) == 2:
@@ -103,7 +100,6 @@ def seq4():
                     p = 0
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
-                #print (p)
     elif len(w) == 3:
         p = len(colours)
         w.append(0)
@@ -116,7 +112,6 @@ def seq4():
                     p = len(colours)-2
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
-                #print (p)
     elif len(w) == 1:
         p = len(colours)
         w.append(0)
@@ -128,8 +123,7 @@ def seq4():
                 if p < 0:
                     p = len(colours)-1
                 button[r][c].config(bg=colours[p])
-                value[r][c] = values[p]
-                #print (p)     
+                value[r][c] = values[p]   
     else:
         p = 0
         w.append(0)
@@ -144,7 +138,6 @@ def seq4():
                     p = len(colours)-1
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
-                #print (p)  
 
 def seq5():
     global w, colour, colours, values
@@ -167,8 +160,6 @@ def seq5():
             # else:
             #     value[r][c] = 90
     print(value)
-    
-    
 
 # def seq4():
 #     colours = ['white','#DCDCDC','#BEBEBE','#989898','#696969','#404040','#101010','black']
@@ -197,52 +188,45 @@ def seq5():
 main = Tk()
 main.title("Tutorial 2 Sample")
 
-#frame = Frame(main)
-#frame.grid()
-
-frame1 = Frame(main)
+frame1 = Frame(main) #frame for grid
 frame1.grid(row=0, column=0)
 
-frame2 = Frame(main)
+frame2 = Frame(main) #frame for colour selection button
 frame2.grid(row=0, column=1)
 
-frame3 = Frame(main)
+frame3 = Frame(main) #frame for fixed pattern/sequence and send image button
 frame3.grid(row=1 , column=0, columnspan=2)
 
 # Colour Section (Using Button Widget)
-colour = 0
-o = 32 #o represent the number of row & column
-
-#grid0 = Button(main, bg=('white') , command=red_pressed , height=2, width=2)
-#grid0.grid(column=0, row=0)
-
-#grid0 = Button(main, bg=('white') , command=red_pressed , height=2, width=2)
-#grid0.grid(column=0, row=0)
+colour = 0 #default value of the colour selected
+o = 32 #defining the number of row & column on the grid
 
 #button = [[r for r in range(3)] c for c in range(3)]
-button = [[r for r in range(o)] for c in range(o)]
-value = [[colour for r in range(o)] for c in range(o)]
+#32 x 32 button grid
+button = [[r for r in range(o)] for c in range(o)] #variable to store and define the button's row and column 
+value = [[colour for r in range(o)] for c in range(o)] #variable to store and define the button's axis angle based on the buttons' colour
 
 for r in range(o):
     for c in range(o):
         #button[r][c] = Button(frame1, bg="white", text="   ", font=('Arial',21), command=lambda m=r, l=c:red_pressed(m, l))
-        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda m=r, l=c:red_pressed(m, l))
-        button[r][c].grid(row=r, column=c)
-        value[r][c] = colour
+        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda m=r, l=c:red_pressed(m, l)) # red_pressed to pass down the row and column value to configure the button's colour and axis angle
+        button[r][c].grid(row=r, column=c) 
+        value[r][c] = colour #assigning the buttton's axis angle based on the corresponding colour
         
-
+#pattern/sequence/send image button
 colourRed = Button(frame3, text="All white", bg=('white'), font=(200), command=seq)
-colourGreen = Button(frame3, text="All Black", fg=('white'), bg=('black'), font=(200), command=seq2)
+colourGreen = Button(frame3, text="All Black", fg=('white'), bg=('black'), font=(200), command=seq2) #fg for font colour bg for background colour
 colourBlue = Button(frame3, text="X Pattern", bg=('gold'), font=(200), command=seq3)
-w = [0]
+w = [0] #optional : for sequence; default value to assign the first sequence presented, like a counter 
 colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200), command=seq4)
-colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), command=seq5)
+colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), command=seq5) #send the value of the corresponding axis angle on the format of list of list
 colourRed.grid(row=0, column=0)
 colourGreen.grid(row=0, column=1)
 colourBlue.grid(row=0, column=2)
 colourGold.grid(row=0, column=3)
 colourOrange.grid(row=1, columnspan=2, column=1)
 
+#colour selection button
 colourgrey = Button(frame2, text="White", bg=('grey99'), font=(200), command=lambda m=0:choose_colour(m))
 colourgrey1 = Button(frame2, text="Grey1", bg=('grey88'), font=(200), command=lambda m=20:choose_colour(m))
 colourgrey2 = Button(frame2, text="Grey2", bg=('grey77'), font=(200), command=lambda m=30:choose_colour(m))
