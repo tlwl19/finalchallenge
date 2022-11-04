@@ -89,7 +89,7 @@ def seq4():
     if len(w) > 4:
         w = [0]
     if len(w) == 2:
-        p = -1
+        p = -1 #variable for colour list 
         w.append(0)
         for r in range(o):
             #if p > (len(colours)-1):
@@ -100,7 +100,7 @@ def seq4():
                     p = 0
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
-    elif len(w) == 3:
+    elif len(w) == 3: #optional
         p = len(colours)
         w.append(0)
         for r in range(o):
@@ -112,7 +112,7 @@ def seq4():
                     p = len(colours)-2
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]
-    elif len(w) == 1:
+    elif len(w) == 1: #optional
         p = len(colours)
         w.append(0)
         for r in range(o):
@@ -124,7 +124,7 @@ def seq4():
                     p = len(colours)-1
                 button[r][c].config(bg=colours[p])
                 value[r][c] = values[p]   
-    else:
+    else: #optional
         p = 0
         w.append(0)
         for r in range(o):
