@@ -11,28 +11,28 @@ def red_pressed(r, c):
     global colour
     if colour == 0:
         button[r][c].config(bg='grey99') #to configure the background colour of the grid selected with the selected colour
-        value[r][c] = 0 #assign the grid's angle value based on the colour selected
+        value[r][c] = values[0] #assign the grid's angle value based on the colour selected
     elif colour == 20:
         button[r][c].config(bg='grey88')
-        value[r][c] = 20
+        value[r][c] = values[1]
     elif colour == 30:
         button[r][c].config(bg='grey77')
-        value[r][c] = 30
+        value[r][c] = values[2]
     elif colour == 40:
         button[r][c].config(bg='grey66')
-        value[r][c] = 40
+        value[r][c] = values[3]
     elif colour == 50:
         button[r][c].config(bg='grey44')
-        value[r][c] = 50
+        value[r][c] = values[4]
     elif colour == 60:
         button[r][c].config(bg='grey33')
-        value[r][c] = 60
+        value[r][c] = values[5]
     elif colour == 70:
         button[r][c].config(bg='grey11')
-        value[r][c] = 70
+        value[r][c] = values[6]
     else:
         button[r][c].config(bg='grey1') 
-        value[r][c] = 90
+        value[r][c] = values[7]
 
 def seq():
     global values
