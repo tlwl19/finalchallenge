@@ -103,6 +103,8 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual grids however they may like.
 
 ```
+values = [0,20,30,40,50,60,70,90]
+
 colour = 0
 o = 3 
 
