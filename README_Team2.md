@@ -1,4 +1,4 @@
-# <u>32 x 32 Polarization Grid</u>
+# <u>**32 x 32 Polarization Grid**</u>
 
 ![](images/overall.png)
 
@@ -22,11 +22,21 @@ A 32x32 grid that allows the user to interact with by clicking on them and chang
 
 <br>
 
+## Sample Outcome:
+![](images/shades_outcome.png)
+
+<br>
+
 ## **All White Button:** 
 
 ![](images/allwhitebutton.png)
 
 Changes the shade of the whole grid to white.
+
+<br>
+
+## Sample Outcome:
+![](images/allwhite_outcome.png)
 
 <br>
 
@@ -38,11 +48,23 @@ Changes the shade of the whole grid to black.
 
 <br>
 
+## Sample Outcome:
+
+![](images/allblack_outcome.png)
+
+<br>
+
 ## **X Pattern Button:** 
 
 ![](images/xpatternbutton.png)
 
 Changes the whole grid into a cross pattern.
+
+<br>
+
+## Sample Outcome:
+
+![](images/xpattern_outcome.png)
 
 <br>
 
@@ -54,11 +76,23 @@ Changes the whole grid into a specific sequence of shades.
 
 <br>
 
+## Sample Outcome:
+
+![](images/sequence_outcome.png)
+
+<br>
+
 ## **Send Image Button:** 
 
 ![](images/sendimagebutton.png)
 
 To generate a List of List in which the output consists of 32 rows and 32 columns.
+
+<br>
+
+## Sample Outcome:
+
+![](images/sendimage_outcome.png)
 
 <br>
 
