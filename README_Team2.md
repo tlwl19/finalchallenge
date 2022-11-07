@@ -100,12 +100,23 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 ## **Grid:** 
 
-A 32x32 grid that allows the user to interact with by clicking on the buttons and changing the shade of grey on individual grids however they may like.
+A 32x32 grid that allows the user to interact with by clicking on the buttons and changing the shade of grey on individual buttons however they may like.
 
+<br>
+
+We assign the default value of the colour to 0.
+This colour variable is to assign the button's background colour and its angle to 0.
 ```
 colour = 0
-o = 32
+```
 
+Add in red_pressed
+
+```
+o = 32
+```
+
+```
 button = [[r for r in range(o)] for c in range(o)]
 value = [[colour for r in range(o)] for c in range(o)]
 
