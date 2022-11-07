@@ -85,7 +85,7 @@ for r in range(o):
 
 ## **Shade Selections:** 
 
-8 buttons for 8 different shades of grey for the user to pick any one they prefer.
+8 buttons for 8 different shades of grey for the user to pick whichever shade they prefer.
 
 ```
 colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), font=(200), command=lambda m=90:choose_colour(m))
@@ -124,7 +124,7 @@ def seq2():
 
 ## **X Pattern Button:** 
 
-Changes the whole grid into a cross pattern.
+Displays a cross pattern on the grid.
 ```
 colourBlue = Button(frame3, text="X Pattern", bg=('gold'), font=(200), command=seq3)
 colourBlue.grid(row=0, column=2)
