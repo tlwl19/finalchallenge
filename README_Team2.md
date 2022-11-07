@@ -1,8 +1,10 @@
 # <u>**32 x 32 Polarization Grid**</u>
 
-![](images/overall.png)
+This Raspberry Pi project is to code for a 32x32 grid that allows the user to change any grid box to different shades of grey of their choice.
 
-Raspberry Pi Project on coding for a 32x32 grid that allows the user to change any grid box to different shades of grey.
+<br>
+
+![](images/overall.png)
 
 # <u>Features</u>
 
@@ -96,7 +98,7 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 <br>
 
-# <u>How the code works</u>
+# <u>How The Code Works</u>
 
 ## **Grid:** 
 
