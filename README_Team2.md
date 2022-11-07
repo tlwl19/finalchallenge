@@ -1,10 +1,8 @@
 # <u>**32 x 32 Polarization Grid**</u>
 
-This Raspberry Pi project is to code for a 32x32 grid that allows the user to change any grid box to different shades of grey of their choice.
-
-<br>
-
 ![](images/overall.png)
+
+Raspberry Pi Project on coding for a 32x32 grid that allows the user to change any grid box to different shades of grey.
 
 # <u>Features</u>
 
@@ -98,11 +96,11 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 <br>
 
-# <u>How The Code Works</u>
+# <u>How the code works</u>
 
 ## **Grid:** 
 
-A 32x32 grid that allows the user to interact with by clicking on the button and changing the shade of grey to individual grids however they may like.
+A 32x32 grid that allows the user to interact with by clicking on the buttons and changing the shade of grey on individual grids however they may like.
 
 ```
 colour = 0
@@ -198,6 +196,8 @@ def seq4():
 ```
 
 ## **Send Image Button:** 
+
+To generate a List of List in which the output consists of 32 rows and 32 columns of values.
 ```
 colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), command=seq5)
 colourOrange.grid(row=1, columnspan=2, column=1)
