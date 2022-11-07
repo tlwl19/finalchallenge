@@ -8,6 +8,21 @@ Raspberry Pi Project on coding for a 32x32 grid that allows the user to change a
 
 A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual grids however they may like.
 
+```
+colour = 0
+o = 3 
+
+button = [[r for r in range(o)] for c in range(o)]
+value = [[colour for r in range(o)] for c in range(o)]
+
+for r in range(o):
+    for c in range(o):
+        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda m=r, l=c:red_pressed(m, l))
+        button[r][c].grid(row=r, column=c) 
+        value[r][c] = colour
+
+```
+
 **Shade Selections:** 
 
 8 buttons for 8 different shades of grey for the user to pick any one they prefer.
