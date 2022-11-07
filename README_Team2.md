@@ -43,6 +43,10 @@ colourRed.grid(row=0, column=0)
 **All Black Button:** 
 
 Changes the shade of the whole grid to black.
+```
+colourGreen = Button(frame3, text="All Black", fg=('white'), bg=('black'), font=(200), command=seq2)
+colourGreen.grid(row=0, column=1)
+```
 
 **X Pattern Button:** 
 
