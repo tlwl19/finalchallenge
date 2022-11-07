@@ -90,7 +90,7 @@ frame3.grid(row=1 , column=0, columnspan=2)
 
 # Colour Section (Using Button Widget)
 colour = 0 #default value of the colour selected
-o = 3 #defining the number of row & column on the grid
+o = 32 #defining the number of row & column on the grid
 
 #32 x 32 button grid
 button = [[r for r in range(o)] for c in range(o)] #variable to store and define the button's row and column 
