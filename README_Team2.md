@@ -18,7 +18,7 @@ A 32x32 grid that allows the user to interact with by clicking on them and chang
 
 ![](images/shades.png)
 
-8 buttons for 8 different shades of grey for the user to pick any one they prefer.
+8 buttons for 8 different shades of grey for the user to pick any colour they prefer.
 
 <br>
 
@@ -31,7 +31,7 @@ A 32x32 grid that allows the user to interact with by clicking on them and chang
 
 ![](images/allwhitebutton.png)
 
-Changes the shade of the whole grid to white.
+All White button changes the shade of the whole grid to white.
 
 <br>
 
@@ -44,7 +44,7 @@ Changes the shade of the whole grid to white.
 
 ![](images/allblackbutton.png)
 
-Changes the shade of the whole grid to black.
+All Black button changes the shade of the whole grid to black.
 
 <br>
 
@@ -58,7 +58,7 @@ Changes the shade of the whole grid to black.
 
 ![](images/xpatternbutton.png)
 
-Changes the whole grid into a cross pattern.
+X Pattern button changes the whole grid into a cross pattern.
 
 <br>
 
@@ -72,7 +72,7 @@ Changes the whole grid into a cross pattern.
 
 ![](images/sequencebutton.png)
 
-Changes the whole grid into a specific sequence of shades.
+Sequence button changes the whole grid into a specific sequence of shades. Our sequence of colour goes from white to black.
 
 <br>
 
@@ -86,7 +86,7 @@ Changes the whole grid into a specific sequence of shades.
 
 ![](images/sendimagebutton.png)
 
-To generate a List of List in which the output consists of 32 rows and 32 columns.
+To generate a List of List in which the output consists of 32 rows and 32 columns of values.
 
 <br>
 
@@ -96,15 +96,13 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 <br>
 
-# <u>Setting Up The Code</u>
+# <u>How the code works</u>
 
 ## **Grid:** 
 
-A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual grids however they may like.
+A 32x32 grid that allows the user to interact with by clicking on the button and changing the shade of grey to individual grids however they may like.
 
 ```
-values = [0,20,30,40,50,60,70,90]
-
 colour = 0
 o = 32
 
