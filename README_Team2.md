@@ -106,7 +106,7 @@ A 32x32 grid that allows the user to interact with by clicking on them and chang
 values = [0,20,30,40,50,60,70,90]
 
 colour = 0
-o = 3 
+o = 32
 
 button = [[r for r in range(o)] for c in range(o)]
 value = [[colour for r in range(o)] for c in range(o)]
