@@ -35,6 +35,10 @@ colourblack.grid(row=0, column=1)
 **All White Button:** 
 
 Changes the shade of the whole grid to white.
+```
+colourRed = Button(frame3, text="All white", bg=('white'), font=(200), command=seq)
+colourRed.grid(row=0, column=0)
+```
 
 **All Black Button:** 
 
