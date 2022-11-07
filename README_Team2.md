@@ -27,6 +27,11 @@ for r in range(o):
 
 8 buttons for 8 different shades of grey for the user to pick any one they prefer.
 
+```
+colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), font=(200), command=lambda m=90:choose_colour(m))
+colourblack.grid(row=0, column=1)
+```
+
 **All White Button:** 
 
 Changes the shade of the whole grid to white.
