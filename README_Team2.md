@@ -51,6 +51,17 @@ colourGreen.grid(row=0, column=1)
 **X Pattern Button:** 
 
 Changes the whole grid into a cross pattern.
+```
+colourBlue = Button(frame3, text="X Pattern", bg=('gold'), font=(200), command=seq3)
+colourBlue.grid(row=0, column=2)
+
+def seq2():
+    global values
+    for r in range(o):
+        for c in range(o):
+            button[r][c].config(bg='grey1')
+            value[r][c] = values[7]
+```
 
 **Sequence Button:** 
 
