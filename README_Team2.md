@@ -1,38 +1,70 @@
-## 32 x 32 Polarization Grid
+# <u>32 x 32 Polarization Grid</u>
+
+![](images/overall.png)
 
 Raspberry Pi Project on coding for a 32x32 grid that allows the user to change any grid box to different shades of grey.
 
-## Features
+# <u>Features</u>
 
-**Grid:** 
+## **Grid:** 
+
+![](images/32grid.png)
 
 A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual grids however they may like.
 
-**Shade Selections:** 
+<br>
+
+## **Shade Selections:** 
+
+![](images/shades.png)
 
 8 buttons for 8 different shades of grey for the user to pick any one they prefer.
 
-**All White Button:** 
+<br>
+
+## **All White Button:** 
+
+![](images/allwhitebutton.png)
 
 Changes the shade of the whole grid to white.
 
-**All Black Button:** 
+<br>
+
+## **All Black Button:** 
+
+![](images/allblackbutton.png)
 
 Changes the shade of the whole grid to black.
 
-**X Pattern Button:** 
+<br>
+
+## **X Pattern Button:** 
+
+![](images/xpatternbutton.png)
 
 Changes the whole grid into a cross pattern.
 
-**Sequence Button:** 
+<br>
+
+## **Sequence Button:** 
+
+![](images/sequencebutton.png)
 
 Changes the whole grid into a specific sequence of shades.
 
-**Send Image Button:** 
+<br>
 
-## Setting Up The Code
+## **Send Image Button:** 
 
-**Grid:** 
+![](images/sendimagebutton.png)
+
+To generate a List of List in which the output consists of 32 rows and 32 columns.
+
+<br>
+
+# <u>Setting Up The Code</u>
+
+## **Grid:** 
 
 A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual grids however they may like.
 
@@ -51,7 +83,7 @@ for r in range(o):
 
 ```
 
-**Shade Selections:** 
+## **Shade Selections:** 
 
 8 buttons for 8 different shades of grey for the user to pick any one they prefer.
 
@@ -60,7 +92,7 @@ colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), font=(200
 colourblack.grid(row=0, column=1)
 ```
 
-**All White Button:** 
+## **All White Button:** 
 
 Changes the shade of the whole grid to white.
 ```
@@ -75,7 +107,7 @@ def seq():
             value[r][c] = values[0]
 ```
 
-**All Black Button:** 
+## **All Black Button:** 
 
 Changes the shade of the whole grid to black.
 ```
@@ -90,7 +122,7 @@ def seq2():
             value[r][c] = values[7]
 ```
 
-**X Pattern Button:** 
+## **X Pattern Button:** 
 
 Changes the whole grid into a cross pattern.
 ```
@@ -109,7 +141,7 @@ def seq3():
                 value[r][c] = values[0]
 ```
 
-**Sequence Button:** 
+## **Sequence Button:** 
 
 Changes the whole grid into a specific sequence of shades.
 ```
@@ -129,7 +161,7 @@ def seq4():
             value[r][c] = values[p]
 ```
 
-**Send Image Button:** 
+## **Send Image Button:** 
 ```
 colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), command=seq5)
 colourOrange.grid(row=1, columnspan=2, column=1)
