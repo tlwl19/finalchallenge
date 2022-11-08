@@ -2,7 +2,7 @@
 
 ![](images/overall.png)
 
-Raspberry Pi Project on coding for a 32x32 grid that allows the user to change any grid box to different shades of grey.
+Raspberry Pi Project on coding for a 32x32 grid that allows the user to change any square within the grid to 8 different shades of grey.
 
 # <u>Features</u>
 
@@ -10,7 +10,7 @@ Raspberry Pi Project on coding for a 32x32 grid that allows the user to change a
 
 ![](images/32grid.png)
 
-A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual grids however they may like.
+A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual squares however they may like.
 
 <br>
 
@@ -113,15 +113,17 @@ colour = 0
 
 Add in red_pressed
 
-"o" represents how many rows and columns do we want in our grid. In this case, we want 32 rows and 32 columns in our grid.
+<br>
+
+"o" represents the number of rows and columns we would want in our grid. In this case, we want 32 rows and 32 columns in our grid.
 
 
 ```
 o = 32
 ```
->Afterwards, we create a for loop in which both rows and columns will be generated.<br> 
-The "button" varible is so that we are able to interact with the individual squares as buttons within the grid.<br> 
-The "value" variable is so that we are able to change the colour of the individual squares within the grid, and also to make the individual squares in the grid white by default.<br>r = rows<br>c = columns
+>Afterwards, we created a `for loop` in which both rows and columns will be generated.<br> 
+The "button" variable is for us to be able to interact with the individual squares as buttons within the 32x32 grid.<br> 
+The "value" variable is for us to be able to select the different shades of grey of the individual squares within the 32x32 grid, and also to make the individual squares in the grid white by default.<br>r = rows<br>c = columns
 
 ```
 button = [[r for r in range(o)] for c in range(o)]
