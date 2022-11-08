@@ -104,6 +104,14 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 <br>
 
+>what to write
+
+```
+values = [0,20,30,40,50,60,70,90]
+```
+
+<br>
+
 >We have assigned the default value of the colour to 0.
 This colour variable is to assign the button's background colour and its angle to 0, and also to make the individual squares in the grid white by default.
 
@@ -219,11 +227,11 @@ def seq3():
     global values
     for r in range(o):
         for c in range(o):
-            if r == c or r+c == o-1: #black x pattern 
+            if r == c or r+c == o-1: 
                 button[r][c].config(bg='grey1')
                 value[r][c] = values[7]
             else: 
-                button[r][c].config(bg='grey99') #white background
+                button[r][c].config(bg='grey99') background
                 value[r][c] = values[0]
 ```
 
@@ -237,7 +245,7 @@ colourGold.grid(row=0, column=3)
 def seq4():
     global w, colours, colour, values
     colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']
-    p = -1 #variable for colour list 
+    p = -1 
     for r in range(o):
         for c in range(o):
             p = p+1
