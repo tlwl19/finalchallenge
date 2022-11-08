@@ -105,13 +105,44 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 <br>
 
 >We have assigned the default value of the colour to 0.
-This colour variable is to assign the button's background colour and its angle to 0.
+This colour variable is to assign the button's background colour and its angle to 0, and also to make the individual squares in the grid white by default.
 
 ```
 colour = 0
 ```
 
-Add in red_pressed
+<br>
+
+>what to write
+
+```
+def red_pressed(r, c): 
+    global colour
+    if colour == 0:
+        button[r][c].config(bg='grey99') #to configure the background colour of the grid selected with the selected colour
+        value[r][c] = values[0] #assign the grid's angle value based on the colour selected
+    elif colour == 20:
+        button[r][c].config(bg='grey88')
+        value[r][c] = values[1]
+    elif colour == 30:
+        button[r][c].config(bg='grey77')
+        value[r][c] = values[2]
+    elif colour == 40:
+        button[r][c].config(bg='grey66')
+        value[r][c] = values[3]
+    elif colour == 50:
+        button[r][c].config(bg='grey44')
+        value[r][c] = values[4]
+    elif colour == 60:
+        button[r][c].config(bg='grey33')
+        value[r][c] = values[5]
+    elif colour == 70:
+        button[r][c].config(bg='grey11')
+        value[r][c] = values[6]
+    else:
+        button[r][c].config(bg='grey1') 
+        value[r][c] = values[7]
+```
 
 <br>
 
@@ -124,7 +155,7 @@ o = 32
 ```
 >Afterwards, we created a `for loop` in which both rows and columns will be generated.<br> 
 The "button" variable is for us to be able to interact with the individual squares as buttons within the 32x32 grid.<br> 
-The "value" variable is for us to be able to select the different shades of grey of the individual squares within the 32x32 grid, and also to make the individual squares in the grid white by default.<br>r = rows<br>c = columns
+The "value" variable is to store the angle value of the corresponding grid according to the colour selected<br>r = rows<br>c = columns
 ```
 button = [[r for r in range(o)] for c in range(o)]
 value = [[colour for r in range(o)] for c in range(o)]
@@ -140,7 +171,7 @@ for r in range(o):
 
 ## **Shade Selections:** 
 
-> 8 buttons for 8 different shades of grey for the user to pick whichever shade they prefer.
+> 8 buttons for 8 different shades of grey for the user to pick whichever shade they prefer.It's for us to be able to select the different shades of grey of the individual squares within the 32x32 grid.
 
 ```
 colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), font=(200), command=lambda m=90:choose_colour(m))
