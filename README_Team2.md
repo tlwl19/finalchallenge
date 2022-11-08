@@ -96,16 +96,17 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 <br>
 
-# <u>How the code works</u>
+# <u>How The Code Works</u>
 
 ## **Grid:** 
 
-A 32x32 grid that allows the user to interact with by clicking on the buttons and changing the shade of grey on individual buttons however they may like.
+> A 32x32 grid that allows the user to interact with by clicking on the buttons and changing the shade of grey on individual buttons however they may like.
 
 <br>
 
-We assign the default value of the colour to 0.
+We have assigned the default value of the colour to 0.
 This colour variable is to assign the button's background colour and its angle to 0.
+
 ```
 colour = 0
 ```
@@ -128,9 +129,10 @@ for r in range(o):
 
 ```
 
+
 ## **Shade Selections:** 
 
-8 buttons for 8 different shades of grey for the user to pick whichever shade they prefer.
+> 8 buttons for 8 different shades of grey for the user to pick whichever shade they prefer.
 
 ```
 colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), font=(200), command=lambda m=90:choose_colour(m))
@@ -139,7 +141,7 @@ colourblack.grid(row=0, column=1)
 
 ## **All White Button:** 
 
-Changes the shade of the whole grid to white.
+> Changes the shade of the whole grid to white.
 ```
 colourRed = Button(frame3, text="All white", bg=('white'), font=(200), command=seq)
 colourRed.grid(row=0, column=0)
@@ -154,7 +156,7 @@ def seq():
 
 ## **All Black Button:** 
 
-Changes the shade of the whole grid to black.
+> Changes the shade of the whole grid to black.
 ```
 colourGreen = Button(frame3, text="All Black", fg=('white'), bg=('black'), font=(200), command=seq2)
 colourGreen.grid(row=0, column=1)
@@ -169,7 +171,7 @@ def seq2():
 
 ## **X Pattern Button:** 
 
-Displays a cross pattern on the grid.
+> Displays a cross pattern on the grid.
 ```
 colourBlue = Button(frame3, text="X Pattern", bg=('gold'), font=(200), command=seq3)
 colourBlue.grid(row=0, column=2)
@@ -188,7 +190,7 @@ def seq3():
 
 ## **Sequence Button:** 
 
-Changes the whole grid into a specific sequence of shades.
+> Changes the whole grid into a specific sequence of shades.
 ```
 colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200), command=seq4)
 colourGold.grid(row=0, column=3)
@@ -208,7 +210,7 @@ def seq4():
 
 ## **Send Image Button:** 
 
-To generate a List of List in which the output consists of 32 rows and 32 columns of values.
+> To generate a List of List in which the output consists of 32 rows and 32 columns of values.
 ```
 colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), command=seq5)
 colourOrange.grid(row=1, columnspan=2, column=1)
