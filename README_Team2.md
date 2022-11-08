@@ -104,7 +104,7 @@ To generate a List of List in which the output consists of 32 rows and 32 column
 
 <br>
 
-We have assigned the default value of the colour to 0.
+>We have assigned the default value of the colour to 0.
 This colour variable is to assign the button's background colour and its angle to 0.
 
 ```
@@ -115,7 +115,8 @@ Add in red_pressed
 
 <br>
 
-"o" represents the number of rows and columns we would want in our grid. In this case, we want 32 rows and 32 columns in our grid.
+>"o" represents the number of rows and columns we would want in our grid. In this case, we want 32 rows and 32 columns in our grid.
+
 
 
 ```
@@ -124,7 +125,6 @@ o = 32
 >Afterwards, we created a `for loop` in which both rows and columns will be generated.<br> 
 The "button" variable is for us to be able to interact with the individual squares as buttons within the 32x32 grid.<br> 
 The "value" variable is for us to be able to select the different shades of grey of the individual squares within the 32x32 grid, and also to make the individual squares in the grid white by default.<br>r = rows<br>c = columns
-
 ```
 button = [[r for r in range(o)] for c in range(o)]
 value = [[colour for r in range(o)] for c in range(o)]
