@@ -119,13 +119,9 @@ Add in red_pressed
 ```
 o = 32
 ```
-Afterwards, we create a for loop in which both rows and columns will be generated. 
-
-The "button" varible is so that we are able to interact with the individual squares within the grid. 
-
-The "value" variable is so that we are able to change the colour of the individual squares within the grid, and also to make the individual squares in the grid white by default.
-
-r = rows<br>c = columns
+>Afterwards, we create a for loop in which both rows and columns will be generated.<br> 
+The "button" varible is so that we are able to interact with the individual squares as buttons within the grid.<br> 
+The "value" variable is so that we are able to change the colour of the individual squares within the grid, and also to make the individual squares in the grid white by default.<br>r = rows<br>c = columns
 
 ```
 button = [[r for r in range(o)] for c in range(o)]
