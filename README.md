@@ -239,13 +239,13 @@ def seq3():
 
 `r+c == o-1` is for the diagonal line from top right to bottom left of the 32x32 grid.
 
-If either one of the arguments are true, `button[r][c].config(bg='grey1')` is to change the colour of the individual squares to black.
+If either one of the arguments are true, `button[r][c].config(bg='grey1')` will change the colour of the individual squares to black.
 <br>
 `value[r][c] = values[7]` changes the value of the individual squares' (that fulfill either of the two arguments') angles to 90.
 
 <br>
 
-If neither are true, `button[r][c].config(bg='grey99')` is to change the colour of the individual squares to white. 
+If neither are true, `button[r][c].config(bg='grey99')` will change the colour of the individual squares to white. 
 <br>
 `value[r][c] = values[0]` changes the value of the individual squares' (that fulfill neither of the two arguments') angles to 0.
 
@@ -258,7 +258,9 @@ If neither are true, `button[r][c].config(bg='grey99')` is to change the colour 
 ```
 colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200), command=seq4)
 colourGold.grid(row=0, column=3)
-
+```
+>Creates button to create a sequence pattern
+```
 def seq4():
     global colours, colour, values
     colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']
@@ -271,6 +273,19 @@ def seq4():
             button[r][c].config(bg=colours[p])
             value[r][c] = values[p]
 ```
+`colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']` defines the array of colors that will be displayed in this sequence pattern.
+<br>
+
+By making `p = -1` , we make it so that the very first square of the grid will start as white, the first color (`grey99`) in the array. 
+<br>
+
+`p = p+1` will continue the pattern within the grid by increasing the values within the array by an increment of 1, until it reaches the end of the colour array.
+<br>
+
+Once the first sequence within the grid reaches the end of the array (`grey1`), the line `p = 0` will ensure that the array will be reset to 0 (`grey99` or white). This is achieved by the if statement `if p > len(colours)-1`, where `len(colours)-1` will give the array value of 7 (8-1 = 7), and that the array value should not go beyond 7.
+<br>
+
+Afterwards, since we are only contiuing the sequence, there is no need to use `p = -1` as the next square after the first sequence will be white, thus `p = 0` is used after the if statement.
 
 ## **Send Image Button:** 
 
