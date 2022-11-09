@@ -1,10 +1,61 @@
-# <u>**32 x 32 Polarization Grid**</u>
+# <u>**32 x 32 Pixel-Tint GUI**</u>
+
+The 32x32 Pixel-Tint system GUI explores the phenomena of light leveraging on electromechanical systems that manipulate polarization to synergize pixelized art forms. 
 
 ![](images/overall.png)
 
-Raspberry Pi Project on coding for a 32x32 grid that allows the user to change any square within the grid to 8 different shades of grey.
+The 32x32 Pixel-Tint GUI allows the user to choose from an array of 8 different shades of grey and the preset patterns to the squares within the 32x32 grid. The "Send Image!" button outputs a total of 1024 buttons of the colour value according to the preset patterns that are chosen. 
 
-# <u>Features</u>
+<br>
+
+## **Hardware** 
+1. Single Board Computer: Raspberry Pi 4 Model B
+2. Operating System: Raspbian Buster Full
+
+<br>
+
+## **Installation** 
+<br>
+Take Note: Only to update Raspberry Pi on the first intial boot
+
+<font size = "4">1. Update the Raspberry Pi</font> 
+
+```
+sudo apt update
+sudo apt upgrade
+```
+<font size = "4">2. Configure Raspberry Pi</font> 
+
+<font size = "3"> **Enable SSH** </font>
+
+SSH is a network protocol that gives users, particularly system administrators, a secure way to access a computer over an unsecured network. To enable SSH type the following:
+
+```
+sudo raspi-config
+```
+Select `3 Interface Options` <br>
+Select `P2 SSH` <br>
+Select ***Enable SSH***
+
+<br>
+
+<font size = "3"> **Enable Virtual Network Computing (VNC)** </font>
+<br>
+VNC is a cross-platform screen sharing system that was created to remotely control another computer. To enable VNC type the following:
+```
+sudo raspi-config
+```
+Select `3 Interface Options` <br>
+Select `P3 VNC` <br>
+Select ***Enable VNC***
+
+
+
+
+
+
+
+## <u>Features</u>
 
 ## **Grid:** 
 
