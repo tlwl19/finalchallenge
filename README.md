@@ -243,7 +243,7 @@ colourGold = Button(frame3, text="Sequence", bg=('pink'), font=(200), command=se
 colourGold.grid(row=0, column=3)
 
 def seq4():
-    global w, colours, colour, values
+    global colours, colour, values
     colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']
     p = -1 
     for r in range(o):
@@ -263,6 +263,6 @@ colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), comm
 colourOrange.grid(row=1, columnspan=2, column=1)
 
 def seq5():
-    global w, colour, colours, values
+    global colour, colours, values
     print(value)
 ```
