@@ -231,9 +231,26 @@ def seq3():
                 button[r][c].config(bg='grey1')
                 value[r][c] = values[7]
             else: 
-                button[r][c].config(bg='grey99') background
+                button[r][c].config(bg='grey99')
                 value[r][c] = values[0]
 ```
+
+`r == c` is for the diagonal line from top left to bottom right of the 32x32 grid.
+
+`r+c == o-1` is for the diagonal line from top right to bottom left of the 32x32 grid.
+
+If either one of the arguments are true, `button[r][c].config(bg='grey1')` is to change the colour of the individual squares to black.
+<br>
+`value[r][c] = values[7]` changes the value of the individual squares' (that fulfill either of the two arguments') angles to 90.
+
+<br>
+
+If neither are true, `button[r][c].config(bg='grey99')` is to change the colour of the individual squares to white. 
+<br>
+`value[r][c] = values[0]` changes the value of the individual squares' (that fulfill neither of the two arguments') angles to 0.
+
+
+<br>
 
 ## **Sequence Button:** 
 
