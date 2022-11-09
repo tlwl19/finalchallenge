@@ -127,29 +127,29 @@ colour = 0
 def red_pressed(r, c): 
     global colour
     if colour == 0:
-        button[r][c].config(bg='grey99') #to configure the background colour of the grid selected with the selected colour
-        value[r][c] = values[0] #assign the grid's angle value based on the colour selected
+        button[r][c].config(bg='grey99') 
+        value[r][c] = colour
     elif colour == 20:
         button[r][c].config(bg='grey88')
-        value[r][c] = values[1]
+        value[r][c] = colour
     elif colour == 30:
         button[r][c].config(bg='grey77')
-        value[r][c] = values[2]
+        value[r][c] = colour
     elif colour == 40:
         button[r][c].config(bg='grey66')
-        value[r][c] = values[3]
+        value[r][c] = colour
     elif colour == 50:
         button[r][c].config(bg='grey44')
-        value[r][c] = values[4]
+        value[r][c] = colour
     elif colour == 60:
         button[r][c].config(bg='grey33')
-        value[r][c] = values[5]
+        value[r][c] = colour
     elif colour == 70:
         button[r][c].config(bg='grey11')
-        value[r][c] = values[6]
+        value[r][c] = colour
     else:
         button[r][c].config(bg='grey1') 
-        value[r][c] = values[7]
+        value[r][c] = colour
 ```
 
 <br>
