@@ -98,7 +98,7 @@ value = [[colour for r in range(o)] for c in range(o)] #variable to store and de
 
 for r in range(o):
     for c in range(o):
-        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda m=r, l=c:red_pressed(m, l)) # red_pressed to pass down the row and column value to configure the button's colour and axis angle
+        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda e=r, l=c:red_pressed(e, l)) # red_pressed to pass down the row and column value to configure the button's colour and axis angle
         button[r][c].grid(row=r, column=c) 
         value[r][c] = colour #assigning the buttton's axis angle based on the corresponding colour
         
