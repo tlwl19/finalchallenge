@@ -77,7 +77,7 @@ def seq5():
 
 # Main GUI Windows
 main = Tk()
-main.title("Tutorial 2 Sample")
+main.title("32X32 Polarization Grid")
 
 frame1 = Frame(main) #frame for grid
 frame1.grid(row=0, column=0)
