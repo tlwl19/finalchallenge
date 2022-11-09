@@ -60,7 +60,7 @@ def seq3():
                 value[r][c] = values[0]
 
 def seq4():
-    global w, colours, colour, values
+    global colours, colour, values
     colours = ['grey99','grey88','grey77','grey66','grey44','grey33','grey11','grey1']
     p = -1 #variable for colour list 
     for r in range(o):
@@ -72,7 +72,7 @@ def seq4():
             value[r][c] = values[p]
 
 def seq5():
-    global w, colour, colours, values
+    global colour, colours, values
     print(value)
 
 # Main GUI Windows
@@ -115,14 +115,14 @@ colourGold.grid(row=0, column=3)
 colourOrange.grid(row=1, columnspan=2, column=1)
 
 #colour selection button
-colourgrey = Button(frame2, text="White", bg=('grey99'), font=(200), command=lambda m=0:choose_colour(m))
-colourgrey1 = Button(frame2, text="Grey1", bg=('grey88'), font=(200), command=lambda m=20:choose_colour(m))
-colourgrey2 = Button(frame2, text="Grey2", bg=('grey77'), font=(200), command=lambda m=30:choose_colour(m))
-colourgrey3 = Button(frame2, text="Grey3", bg=('grey66'), font=(200), command=lambda m=40:choose_colour(m))
-colourgrey4 = Button(frame2, text="Grey4", fg=('white'), bg=('grey55'), font=(200), command=lambda m=50:choose_colour(m))
-colourgrey5 = Button(frame2, text="Grey5", fg=('white'), bg=('grey33'), font=(200), command=lambda m=60:choose_colour(m))
-colourgrey6 = Button(frame2, text="Grey6", fg=('white'), bg=('grey11'), font=(200), command=lambda m=70:choose_colour(m))
-colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), font=(200), command=lambda m=90:choose_colour(m))
+colourgrey = Button(frame2, text="White", bg=('grey99'), height=1 , width=4 , font=(200), command=lambda m=0:choose_colour(m))
+colourgrey1 = Button(frame2, text="Grey1", bg=('grey88'), height=1 , width=4 , font=(200), command=lambda m=20:choose_colour(m))
+colourgrey2 = Button(frame2, text="Grey2", bg=('grey77'), height=1 , width=4 , font=(200), command=lambda m=30:choose_colour(m))
+colourgrey3 = Button(frame2, text="Grey3", bg=('grey66'), height=1 , width=4 , font=(200), command=lambda m=40:choose_colour(m))
+colourgrey4 = Button(frame2, text="Grey4", fg=('white'), bg=('grey55'), height=1 , width=4 , font=(200), command=lambda m=50:choose_colour(m))
+colourgrey5 = Button(frame2, text="Grey5", fg=('white'), bg=('grey33'), height=1 , width=4 , font=(200), command=lambda m=60:choose_colour(m))
+colourgrey6 = Button(frame2, text="Grey6", fg=('white'), bg=('grey11'), height=1 , width=4 , font=(200), command=lambda m=70:choose_colour(m))
+colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), height=1 , width=4 , font=(200), command=lambda m=90:choose_colour(m))
 colourgrey.grid(row=0, column=1)
 colourgrey1.grid(row=1, column=1)
 colourgrey2.grid(row=2, column=1)
