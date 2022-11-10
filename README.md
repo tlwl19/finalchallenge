@@ -2,10 +2,12 @@
 
 The 32x32 Pixel-Tint system GUI explores the phenomena of light leveraging on electromechanical systems that manipulate polarization to synergize pixelized art forms. 
 
-We chose to do a 32x32 pixelated image because we want to make the picture more detailed and sharper so that we can distinguish the elements from one another as compared to Figure 1.
+We chose to do a 32x32 pixelated image because we want to make the picture more detailed and sharper so that we can distinguish the elements from one another as compared to the picture below.
 <br>
 
 ![](images/Pixelized%20image.png)
+<br>
+
 *16X16 Pixelized Images*
 
 <br>
@@ -14,6 +16,8 @@ The 32x32 Pixel-Tint GUI allows the user to choose from an array of 8 different 
 <br>
 
 ![](images/overall.png)
+<br>
+
 *32X32 Pixel-Tint GUI*
 
 <br>
@@ -23,6 +27,8 @@ The 32x32 Pixel-Tint GUI allows the user to choose from an array of 8 different 
 2. Operating System: Raspbian Buster Full
 
 ![](images/RaspberryPi.png)
+<br>
+
 *Fu YongWei, EGL314, Lecture notes 1*
 
 ## **Software** 
@@ -134,6 +140,8 @@ main.mainloop()
 
 
 ![](images/tkinter_ss.png)
+<br>
+
 *Main GUI Window*
 
 <br>
@@ -165,6 +173,8 @@ frame3.grid(row=1 , column=0, columnspan=2)
 <font size = "4">Output</font>
 
 ![](images/frame.png)
+<br>
+
 *Frames*
 
 ## Creating the 32x32 Grid
@@ -228,6 +238,8 @@ for r in range(o):
 <font size = "4">Output</font>
 
 ![](images/32grid.png)
+<br>
+
 *32x32 Grid*
 
 ## Creating 8 Shades of Grey
@@ -279,6 +291,7 @@ colourblack.grid(row=7, column=1)
 <font size = "4">Output</font>
 
 ![](images/shades.png)
+<br>
 
 *8 Shades of Grey*
 
@@ -287,6 +300,8 @@ colourblack.grid(row=7, column=1)
 Here, we created 4 Preset Pattern Buttons in which each button will have their own specific outputs. Changing the individual squares' shades will also change their angle values.
 
 ![](images/preset_buttons.png)
+<br>
+
 *Preset Pattern Buttons*
 
 <br>
@@ -300,6 +315,7 @@ colourRed.grid(row=0, column=0)
 <font size = "4">Output</font>
 
 ![](images/allwhitebutton.png)
+<br>
 
 *All White Button*
 
@@ -318,6 +334,8 @@ def seq():
 <font size = "4">Output</font>
 
 ![](images/allwhite_outcome.png)
+<br>
+
 *All White Outcome*
 
 <br>
@@ -333,6 +351,7 @@ colourGreen.grid(row=0, column=1)
 <font size = "4">Output</font>
 
 ![](images/allblackbutton.png)
+<br>
 
 *All Black Button*
 
@@ -352,6 +371,7 @@ def seq2():
 <font size = "4">Output</font>
 
 ![](images/allblack_outcome.png)
+<br>
 
 *All Black Outcome*
 
@@ -368,6 +388,7 @@ colourBlue.grid(row=0, column=2)
 <font size = "4">Output</font>
 
 ![](images/xpatternbutton.png)
+<br>
 
 *X Pattern Button*
 
@@ -399,6 +420,7 @@ If neither are true, `button[r][c].config(bg='grey99')` will change the colour o
 <font size = "4">Output</font>
 
 ![](images/xpattern_outcome.png)
+<br>
 
 *X Pattern Outcome*
 
@@ -415,6 +437,7 @@ colourGold.grid(row=0, column=3)
 <font size = "4">Output</font>
 
 ![](images/sequencebutton.png)
+<br>
 
 *Sequence Button*
 
@@ -452,6 +475,7 @@ Afterwards, since we are only contiuing the sequence, there is no need to use `p
 <font size = "4">Output</font>
 
 ![](images/sequence_outcome.png)
+<br>
 
 *Sequence Outcome*
 
@@ -467,6 +491,8 @@ colourOrange.grid(row=1, columnspan=2, column=1)
 ```
 
 ![](images/sendimagebutton.png)
+<br>
+
 
 *Send Image Button*
 
@@ -502,6 +528,8 @@ python3 main.py
 <font size = "4">Output</font>
 
 ![](images/sendimage_outcome.png)
+<br>
+
 
 *The values printed are based on the sequence pattern.*
 
