@@ -77,8 +77,12 @@ Select ***Enable SSH***
 ![](images/connect.jpg)
 *Connect the account to VNC viewer*
 
+<br>
+
 ![](images/vnc%20viewer.jpg)
 *Inside VNC Viewer*
+
+<br>
 
 ![](images/pythonvnc.jpg)
 *Python Language*
