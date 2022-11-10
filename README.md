@@ -87,6 +87,8 @@ Select ***Enable SSH***
 ![](images/pythonvnc.jpg)
 *Python Language*
 
+<br>
+
 VNC is a cross-platform screen sharing system that was created to remotely control another computer. To enable VNC type the following:
 ```
 sudo raspi-config
