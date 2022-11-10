@@ -93,9 +93,20 @@ hdmi_force_hotplug=1
 
 Save and exit the nano file editor:
 
-`crtl + o` to write (save) the file
+`ctrl + o` to write (save) the file
 
-`crtl + x` to exit the editor
+`ctrl + x` to exit the editor
+
+```mermaid
+graph TD
+A[<font size = 5>main.py] --> B[<font size = 5>Shades of Grey<br><font size = 4>choose_colour]
+A --> C[<font size = 5>32x32 Grid<br><font size = 4>red_pressed]
+A --> D[<font size = 5>Pattern Button<br><font size = 4>seq<br>seq2<br><font size = 3>This is to make a sequence pattern <br>from white to black in the 32x32 grid on-click.<br>seq3<br>seq4]
+A --> E[<font size = 5>Send Image Button<br><font size = 4>seq5<font size = 3><br>This is to print out the angle values of <br>the 32x32 individual squares' shades. ]
+C --> A
+B --> C
+D --> B
+```
 
 ## **GUI Setup**
 
