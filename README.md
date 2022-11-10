@@ -155,7 +155,50 @@ frame3.grid(row=1 , column=0, columnspan=2)
 
 ## Creating the 32x32 Grid
 
-We used a List of List and a nested for loop to create the 32x32 grid.
+Here, we will be creating the 32x32 grid.
+
+```
+colour = 0
+o = 32
+```
+>The default colour of the 32x32 grid is white, and the value of white is 0.<br>
+The variable `o` represents the number of rows and columns. In this case, we assigned 32 to the variable `o`.
+
+<br>
+
+This is to assign the individual squares' background colours and its values.
+```
+def red_pressed(r, c): 
+    global colour
+    if colour == 0:
+        button[r][c].config(bg='grey99')
+        value[r][c] = colour 
+    elif colour == 20:
+        button[r][c].config(bg='grey88')
+        value[r][c] = colour
+    elif colour == 30:
+        button[r][c].config(bg='grey77')
+        value[r][c] = colour
+    elif colour == 40:
+        button[r][c].config(bg='grey66')
+        value[r][c] = colour
+    elif colour == 50:
+        button[r][c].config(bg='grey44')
+        value[r][c] = colour
+    elif colour == 60:
+        button[r][c].config(bg='grey33')
+        value[r][c] = colour
+    elif colour == 70:
+        button[r][c].config(bg='grey11')
+        value[r][c] = colour
+    else:
+        button[r][c].config(bg='grey1') 
+        value[r][c] = colour
+```
+<br>
+
+We used a List of List and a nested for loop to create the 32x32 grid and its values.
+
 
 ```
 button = [[r for r in range(o)] for c in range(o)] 
@@ -176,6 +219,18 @@ for r in range(o):
 ## Creating 8 Shades of Grey
 
 We used the Button widget to create 8 different buttons of shades of grey. Changing the individual squares' shades will also change their angle values.
+
+<br>
+
+This is to change the values of the individual squares according to the selected shades of grey.
+
+```
+def choose_colour(button_pressed):
+    global colour 
+    colour = button_pressed
+```
+
+This is to create the buttons of the 8 different shades of grey.
 
 ```
 colourgrey = Button(frame2, text="White", bg=('grey99'), height=1 , width=4 , font=(200), command=lambda m=0:choose_colour(m))
@@ -207,6 +262,8 @@ colourgrey6.grid(row=6, column=1)
 colourblack = Button(frame2, text="Black", fg=('white'), bg=('grey1'), height=1 , width=4 , font=(200), command=lambda m=90:choose_colour(m))
 colourblack.grid(row=7, column=1)
 ```
+<font size = "4">Output</font>
+
 ![Figure 6](images/shades.png)
 
 *Figure 6: 8 Shades of Grey*
@@ -347,6 +404,12 @@ colourGold.grid(row=0, column=3)
 
 *Figure 14: Sequence Button*
 
+This array is to store the values of the 8 different shades of grey.
+
+```
+values = [0,20,30,40,50,60,70,90]
+```
+
 <br>
 
 This is to make a sequence pattern from white to black in the 32x32 grid on-click.
@@ -380,7 +443,7 @@ Afterwards, since we are only contiuing the sequence, there is no need to use `p
 
 ## Creating the Send Image Button
 
-Here, we created a button labelled 'Send Image!' to generate a 32x32 array of values. 
+Here, we created a button labelled 'Send Image!' to generate a List of List in which the output consists of 32 rows and 32 columns of values.
 
 This is to create the Send Image button.
 
@@ -395,7 +458,7 @@ colourOrange.grid(row=1, columnspan=2, column=1)
 
 <br>
 
-This is to print out the angle values of the 32x32 individual squares' shades.
+This is to print out the angle values of the 32x32 individual squares' shades. 
 
 ```
 def seq5():
@@ -404,11 +467,23 @@ def seq5():
 ```
 In order to view the values from the terminal, you will need to change the directory to the folder of the file. After changing the directory, you will need to enter `python3 filename.py` to print the output.
 
+
+1. Open the terminal on Raspberry Pi.
+2. In the terminal, type the following commands under this format: 
 ```
-cd /directory/folder
-python3 filename.py
+cd /Directory
 ```
 
+Example:
+
+```
+cd /home/pi/Documents/EGL314/
+```
+3. Once inside the directory folder of your file, type in the following:
+
+```
+python3 main.py
+```
 
 <font size = "4">Output</font>
 
@@ -419,130 +494,3 @@ python3 filename.py
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A 32x32 grid that allows the user to interact with by clicking on them and changing the shade of grey to individual squares however they may like.
-
-
-
-8 buttons for 8 different shades of grey for the user to pick any colour they prefer.
-
-
-
-To generate a List of List in which the output consists of 32 rows and 32 columns of values.
-
-
-```
-values = [0,20,30,40,50,60,70,90]
-```
-
-<br>
-
->We have assigned the default value of the colour to 0.
-This colour variable is to assign the button's background colour and its angle to 0, and also to make the individual squares in the grid white by default.
-
-```
-colour = 0
-```
-
-<br>
-
->what to write
-
-```
-def red_pressed(r, c): 
-    global colour
-    if colour == 0:
-        button[r][c].config(bg='grey99') 
-        value[r][c] = colour
-    elif colour == 20:
-        button[r][c].config(bg='grey88')
-        value[r][c] = colour
-    elif colour == 30:
-        button[r][c].config(bg='grey77')
-        value[r][c] = colour
-    elif colour == 40:
-        button[r][c].config(bg='grey66')
-        value[r][c] = colour
-    elif colour == 50:
-        button[r][c].config(bg='grey44')
-        value[r][c] = colour
-    elif colour == 60:
-        button[r][c].config(bg='grey33')
-        value[r][c] = colour
-    elif colour == 70:
-        button[r][c].config(bg='grey11')
-        value[r][c] = colour
-    else:
-        button[r][c].config(bg='grey1') 
-        value[r][c] = colour
-```
-
-<br>
-
->"o" represents the number of rows and columns we would want in our grid. In this case, we want 32 rows and 32 columns in our grid.
-
-
-
-```
-o = 32
-```
->Afterwards, we created a `for loop` in which both rows and columns will be generated.<br> 
-The "button" variable is for us to be able to interact with the individual squares as buttons within the 32x32 grid.<br> 
-The "value" variable is to store the angle value of the corresponding grid according to the colour selected<br>r = rows<br>c = columns
-```
-button = [[r for r in range(o)] for c in range(o)]
-value = [[colour for r in range(o)] for c in range(o)]
-
-for r in range(o):
-    for c in range(o):
-        button[r][c] = Button(frame1, bg="white", text="  ", font=('Arial',5), command=lambda m=r, l=c:red_pressed(m, l))
-        button[r][c].grid(row=r, column=c) 
-        value[r][c] = colour
-
-```
