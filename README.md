@@ -74,6 +74,13 @@ Select ***Enable SSH***
 
 <font size = "3"> **Enable Virtual Network Computing (VNC)** </font>
 <br>
+![](images/connect.jpg)
+*Connect the account to VNC viewer*
+
+![](images/vnc%20viewer.jpg)
+*Inside VNC Viewer*
+
+
 VNC is a cross-platform screen sharing system that was created to remotely control another computer. To enable VNC type the following:
 ```
 sudo raspi-config
