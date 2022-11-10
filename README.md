@@ -5,22 +5,25 @@ The 32x32 Pixel-Tint system GUI explores the phenomena of light leveraging on el
 We chose to do a 32x32 pixelated image because we want to make the picture more detailed and sharper so that we can distinguish the elements from one another as compared to Figure 1.
 <br>
 
-![Figure 1](images/Pixelized%20image.png)
-*Figure 1: 16X16 Pixelized Images*
+![](images/Pixelized%20image.png)
+*16X16 Pixelized Images*
 
 <br>
 The 32x32 Pixel-Tint GUI allows the user to choose from an array of 8 different shades of grey and the preset patterns to the squares within the 32x32 grid. The "Send Image!" button outputs a total of 1024 buttons of the colour value according to the preset patterns that are chosen. 
 
 <br>
 
-![Figure 2](images/overall.png)
-*Figure 2: 32X32 Pixel-Tint GUI*
+![](images/overall.png)
+*32X32 Pixel-Tint GUI*
 
 <br>
 
 ## **Hardware** 
 1. Single Board Computer: Raspberry Pi 4 Model B
 2. Operating System: Raspbian Buster Full
+
+![](images/RaspberryPi.png)
+*Fu YongWei, EGL314, Lecture notes 1*
 
 ## **Software** 
 1. PuTTY 
@@ -130,8 +133,8 @@ main.mainloop()
 <font size = "4">Output</font>
 
 
-![Figure 3](images/tkinter_ss.png)
-*Figure 3: Main GUI Window*
+![](images/tkinter_ss.png)
+*Main GUI Window*
 
 <br>
 
@@ -161,8 +164,8 @@ frame3.grid(row=1 , column=0, columnspan=2)
 ```
 <font size = "4">Output</font>
 
-![Figure 4](images/frame.png)
-*Figure 4: Frames*
+![](images/frame.png)
+*Frames*
 
 ## Creating the 32x32 Grid
 
@@ -224,8 +227,8 @@ for r in range(o):
 
 <font size = "4">Output</font>
 
-![Figure 5](images/32grid.png)
-*Figure 5: 32x32 Grid*
+![](images/32grid.png)
+*32x32 Grid*
 
 ## Creating 8 Shades of Grey
 
@@ -275,16 +278,16 @@ colourblack.grid(row=7, column=1)
 ```
 <font size = "4">Output</font>
 
-![Figure 6](images/shades.png)
+![](images/shades.png)
 
-*Figure 6: 8 Shades of Grey*
+*8 Shades of Grey*
 
 ## Creating the Preset Pattern Buttons
 
 Here, we created 4 Preset Pattern Buttons in which each button will have their own specific outputs. Changing the individual squares' shades will also change their angle values.
 
-![Figure 7](images/preset_buttons.png)
-*Figure 7: Preset Pattern Buttons*
+![](images/preset_buttons.png)
+*Preset Pattern Buttons*
 
 <br>
 
@@ -296,9 +299,9 @@ colourRed.grid(row=0, column=0)
 
 <font size = "4">Output</font>
 
-![Figure 8](images/allwhitebutton.png)
+![](images/allwhitebutton.png)
 
-*Figure 8: All White Button*
+*All White Button*
 
 <br>
 
@@ -314,8 +317,8 @@ def seq():
 
 <font size = "4">Output</font>
 
-![Figure 9](images/allwhite_outcome.png)
-*Figure 9: All White Outcome*
+![](images/allwhite_outcome.png)
+*All White Outcome*
 
 <br>
 
@@ -329,9 +332,9 @@ colourGreen.grid(row=0, column=1)
 
 <font size = "4">Output</font>
 
-![Figure 10](images/allblackbutton.png)
+![](images/allblackbutton.png)
 
-*Figure 10: All Black Button*
+*All Black Button*
 
 <br>
 
@@ -348,9 +351,9 @@ def seq2():
 
 <font size = "4">Output</font>
 
-![Figure 11](images/allblack_outcome.png)
+![](images/allblack_outcome.png)
 
-*Figure 11: All Black Outcome*
+*All Black Outcome*
 
 <br>
 
@@ -364,9 +367,9 @@ colourBlue.grid(row=0, column=2)
 
 <font size = "4">Output</font>
 
-![Figure 12](images/xpatternbutton.png)
+![](images/xpatternbutton.png)
 
-*Figure 12: X Pattern Button*
+*X Pattern Button*
 
 <br>
 
@@ -395,9 +398,9 @@ If neither are true, `button[r][c].config(bg='grey99')` will change the colour o
 
 <font size = "4">Output</font>
 
-![Figure 13](images/xpattern_outcome.png)
+![](images/xpattern_outcome.png)
 
-*Figure 13: X Pattern Outcome*
+*X Pattern Outcome*
 
 <br>
 
@@ -411,9 +414,9 @@ colourGold.grid(row=0, column=3)
 
 <font size = "4">Output</font>
 
-![Figure 14](images/sequencebutton.png)
+![](images/sequencebutton.png)
 
-*Figure 14: Sequence Button*
+*Sequence Button*
 
 This array is to store the values of the 8 different shades of grey.
 
@@ -448,9 +451,9 @@ Afterwards, since we are only contiuing the sequence, there is no need to use `p
 
 <font size = "4">Output</font>
 
-![Figure 15](images/sequence_outcome.png)
+![](images/sequence_outcome.png)
 
-*Figure 15: Sequence Outcome*
+*Sequence Outcome*
 
 ## Creating the Send Image Button
 
@@ -463,9 +466,9 @@ colourOrange = Button(frame3, text="Send Image!", bg=('white'), font=(200), comm
 colourOrange.grid(row=1, columnspan=2, column=1)
 ```
 
-![Figure 16](images/sendimagebutton.png)
+![](images/sendimagebutton.png)
 
-*Figure 16: Send Image Button*
+*Send Image Button*
 
 <br>
 
@@ -498,9 +501,9 @@ python3 main.py
 
 <font size = "4">Output</font>
 
-![Figure 17](images/sendimage_outcome.png)
+![](images/sendimage_outcome.png)
 
-*Figure 17: The values printed are based on the sequence pattern.*
+*The values printed are based on the sequence pattern.*
 
 
 
