@@ -2,15 +2,26 @@
 
 The 32x32 Pixel-Tint system GUI explores the phenomena of light leveraging on electromechanical systems that manipulate polarization to synergize pixelized art forms. 
 
-![](images/overall.png)
+We chose to do a 32x32 pixelated image because we want to make the picture more detailed and sharper so that we can distinguish the elements from one another as compared to Figure 1.
+![Figure 1](images/Pixelized%20image.png)
+*Figure 1: 16X16 Pixelized Images*
 
+<br>
 The 32x32 Pixel-Tint GUI allows the user to choose from an array of 8 different shades of grey and the preset patterns to the squares within the 32x32 grid. The "Send Image!" button outputs a total of 1024 buttons of the colour value according to the preset patterns that are chosen. 
+
+![Figure 2](images/overall.png)
+*Figure 2: 32X32 Pixel-Tint GUI*
 
 <br>
 
 ## **Hardware** 
 1. Single Board Computer: Raspberry Pi 4 Model B
 2. Operating System: Raspbian Buster Full
+
+## **Software** 
+1. PuTTY 
+2. VNC Viewer
+3. Python
 
 <br>
 
