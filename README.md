@@ -80,6 +80,8 @@ Select ***Enable SSH***
 ![](images/vnc%20viewer.jpg)
 *Inside VNC Viewer*
 
+![](images/pythonvnc.jpg)
+*Python Language*
 
 VNC is a cross-platform screen sharing system that was created to remotely control another computer. To enable VNC type the following:
 ```
