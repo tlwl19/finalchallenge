@@ -102,9 +102,9 @@ Save and exit the nano file editor:
 
 ```mermaid
 graph TD
-A[<font size = 5>main.py] --> B[<font size = 5>Shades of Grey<br><font size = 4>choose_colour]
-A --> C[<font size = 5>32x32 Grid<br><font size = 4>red_pressed]
-A --> D[<font size = 5>Pattern Button<br><font size = 4>seq<br>seq2<br><font size = 3>This is to make a sequence pattern <br>from white to black in the 32x32 grid on-click.<br>seq3<br>seq4]
+A[<font size = 10>main.py] --> B[<font size = 5>Shades of Grey<br><font size = 4>choose_colour<font size = 3><br>This is to change the values of the individual<br>squares according to the selected shades of grey.]
+A --> C[<font size = 5>32x32 Grid<br><font size = 4>red_pressed<font size = 3><br>This is to assign the individual squares' <br>background colours and its values.]
+A --> D[<font size = 5>Pattern Button<br><font size = 4>seq<font size = 3><br>This is to make all the individual squares in <br>the 32x32 grid turn white on-click.<br>seq2<font size = 3><br>This is to make all the individual squares in <br>the 32x32 grid turn black on-click.<font size = 3><br>seq3<font size = 3><br>This is to make a cross pattern in<br> the 32x32 grid on-click.<br>seq4<font size = 3><br>This is to make a sequence pattern <br>from white to black in the 32x32 grid on-click.]
 A --> E[<font size = 5>Send Image Button<br><font size = 4>seq5<font size = 3><br>This is to print out the angle values of <br>the 32x32 individual squares' shades. ]
 C --> A
 B --> C
